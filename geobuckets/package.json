@@ -1,7 +1,7 @@
 {
   "name": "geobuckets",
   "version": "0.0.0",
-  "description": "",
+  "description": "Lightweight TypeScript library for data classification",
   "main": "index.js",
   "type": "module",
   "scripts": {
