@@ -8,13 +8,13 @@ export const equalIntervalBuckets = (data: Array<number>, numberClasses: number,
     const bucketMin: number = classMin || Math.min(...data)
     const bucketMax: number = classMax || Math.max(...data)
 
-    const interval: number = (bucketMax - bucketMin) / numberClasses
-
     const buckets: Array<number> = []
+
+    const interval: number = (bucketMax - bucketMin) / numberClasses
     let bucketModifier: number = bucketMin
     for (let idx = 0; idx <= numberClasses; idx++) {
         buckets[idx] = bucketModifier
-        bucketModifier += idx
+        bucketModifier += interval
     }
 
     buckets[numberClasses] = bucketMax
