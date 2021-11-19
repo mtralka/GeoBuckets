@@ -1,4 +1,4 @@
-# 🌎:bucket: GeoBuckets
+# 🌎🪣 GeoBuckets 
 
 Lightweight Javascript (TypeScript, really) library for classification. Dependency free and type safe.
 
@@ -9,6 +9,5 @@ Lightweight Javascript (TypeScript, really) library for classification. Dependen
 - Arithmetic Progression
 - Geometric Progression
 - Quantiles
-- Jenks
 
-_A modern implementation of the [GeoStats]("https://github.com/simogeo/geostats") library by Simon Georget (MIT license)_
+*A modern implementation of the [GeoStats]("https://github.com/simogeo/geostats") library by Simon Georget (MIT license)*
