@@ -1,4 +1,4 @@
-# 🌎:bucket: GeoBuckets 
+# 🌎🪣 GeoBuckets 
 
 Lightweight Javascript (TypeScript, really) library for classification. Dependency free and type safe.
 
