@@ -1,6 +1,6 @@
 import { calcMean, calcStandardDeviation } from "../utils"
 
-export const standardDeviationBuckets = (data: Array<number>, numberClasses: number, matchDataBounds : boolean = false) : Array<number> => {
+export const standardDeviationBuckets = (data: Array<number>, numberClasses: number, matchDataBounds : boolean = true) : Array<number> => {
 
 
     // if (!validateNumberClasses(validateNumberClasses)) return

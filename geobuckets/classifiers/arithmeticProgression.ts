@@ -5,10 +5,15 @@ export const arithmeticProgressionBuckets = (data: Array<number>, numberClasses:
 
     // if (!validateDataArray) return 
 
+    let denominator: number = 0
+    for (let idx = 1; idx <= numberClasses; idx++) {
+        denominator += idx;
+    }
+
     const bucketMin: number = Math.min(...data)
     const bucketMax: number = Math.max(...data)
 
-    const interval: number = (bucketMax - bucketMin) / numberClasses;
+    const interval: number = (bucketMax - bucketMin) / denominator;
 
     const buckets: Array<number> = []
 
