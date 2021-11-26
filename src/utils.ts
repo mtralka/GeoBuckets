@@ -1,5 +1,3 @@
-
-
 export const validateNumberClasses = (numberClasses: Number, arrayLength: number) : void => {
 
     if (!Number.isInteger(numberClasses)) throw "Number classes must be an integer"
