@@ -4,13 +4,13 @@ export const validateNumberClasses = (numberClasses: Number, arrayLength: number
 
     if (!Number.isInteger(numberClasses)) throw "Number classes must be an integer"
     if (numberClasses > arrayLength) throw "Number classes must be less than array length"
-
+    if (numberClasses === 0) throw "Number classes must be greater than zero"
     
 }
 
 export const validateDataArray = (arrayLength: number) : void => {
 
-    if (arrayLength <= 0) throw "Array must be bigger than one"
+    if (arrayLength <= 0) throw "Array length must be bigger than one"
 }
 
 export const calcStandardDeviation = (data: Array<number>) : number => {
