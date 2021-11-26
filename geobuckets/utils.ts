@@ -8,12 +8,10 @@ export const validateNumberClasses = (numberClasses: Number, arrayLength: number
     
 }
 
-// export const validateDataArray = (data: Array<Number>) : boolean => {
+export const validateDataArray = (arrayLength: number) : void => {
 
-//     if (data.length <= 0) throw "Array must be bigger than one"
-
-//     return true
-// }
+    if (arrayLength <= 0) throw "Array must be bigger than one"
+}
 
 export const calcStandardDeviation = (data: Array<number>) : number => {
     const n: number = data.length

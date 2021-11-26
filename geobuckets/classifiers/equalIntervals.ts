@@ -1,9 +1,9 @@
+import { validateNumberClasses, validateDataArray } from "../utils";
 
 export const equalIntervalBuckets = (data: Array<number>, numberClasses: number, classMin?: number, classMax?: number) : Array<number> => {
 
     validateNumberClasses(numberClasses, data.length)
-
-    // if (!validateDataArray) return 
+    validateDataArray(data.length)
 
     const bucketMin: number = classMin || Math.min(...data)
     const bucketMax: number = classMax || Math.max(...data)

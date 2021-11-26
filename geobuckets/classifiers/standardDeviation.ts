@@ -1,11 +1,10 @@
-import { calcMean, calcStandardDeviation } from "../utils"
+import { calcMean, calcStandardDeviation, validateDataArray, validateNumberClasses } from "../utils"
 
 export const standardDeviationBuckets = (data: Array<number>, numberClasses: number, matchDataBounds : boolean = true) : Array<number> => {
 
 
     validateNumberClasses(numberClasses, data.length)
-
-    // if (!validateDataArray) return 
+    validateDataArray(data.length)
 
     const bucketMin: number = Math.min(...data)
     const bucketMax: number = Math.max(...data)

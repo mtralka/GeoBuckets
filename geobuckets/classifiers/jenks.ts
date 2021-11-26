@@ -1,9 +1,9 @@
+import { validateNumberClasses, validateDataArray } from "../utils";
 
 export const jenksBuckets = (data: Array<number>, numberClasses: number) : Array<number> => {
 
     validateNumberClasses(numberClasses, data.length)
-
-    // if (!validateDataArray) return 
+    validateDataArray(data.length)
 
     data.sort((a,b) => a - b)
 
