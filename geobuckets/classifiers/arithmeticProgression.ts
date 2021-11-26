@@ -1,12 +1,10 @@
-import { validateNumberClasses, validateDataArray } from "../utils";
+import { validateDataArray, validateNumberClasses } from "../utils";
 
 
 export const arithmeticProgressionBuckets = (data: Array<number>, numberClasses: number) : Array<number> => {
 
     validateNumberClasses(numberClasses, data.length)
     validateDataArray(data.length)
-
-    // if (!validateDataArray) return 
 
     let denominator: number = 0
     for (let idx = 1; idx <= numberClasses; idx++) {

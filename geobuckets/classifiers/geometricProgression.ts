@@ -1,11 +1,11 @@
-import { validateNumberClasses, validateDataArray } from "../utils";
+import { validateDataArray, validateNumberClasses } from "../utils";
 
 export const geometricProgressionBuckets = (data: Array<number>, numberClasses: number) : Array<number> => {
 
     validateNumberClasses(numberClasses, data.length)
     validateDataArray(data.length)
 
-    // CHECK IF NEGATIVE OR ZERO
+    if (!data.every((el) => el > 0)) throw "Array values must be positive for geometric progression"
 
     const bucketMin: number = Math.min(...data)
     const bucketMax: number = Math.max(...data)
