@@ -1,6 +1,6 @@
 {
   "name": "geobuckets",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Lightweight TypeScript library for data classification",
   "main": "index.js",
   "type": "module",
@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Matthew Tralka",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "typescript": "^4.5.2"

@@ -3,7 +3,7 @@ import { calcMean, calcStandardDeviation } from "../utils"
 export const standardDeviationBuckets = (data: Array<number>, numberClasses: number, matchDataBounds : boolean = true) : Array<number> => {
 
 
-    // if (!validateNumberClasses(validateNumberClasses)) return
+    validateNumberClasses(numberClasses, data.length)
 
     // if (!validateDataArray) return 
 

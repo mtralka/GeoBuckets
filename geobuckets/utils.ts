@@ -1,11 +1,12 @@
 
 
-// export const validateNumberClasses = (numberClasses: Number) : boolean => {
+export const validateNumberClasses = (numberClasses: Number, arrayLength: number) : void => {
 
-//     if (!Number.isInteger(numberClasses)) throw "Number classes must be an integer"
+    if (!Number.isInteger(numberClasses)) throw "Number classes must be an integer"
+    if (numberClasses > arrayLength) throw "Number classes must be less than array length"
 
-//     return true
-// }
+    
+}
 
 // export const validateDataArray = (data: Array<Number>) : boolean => {
 

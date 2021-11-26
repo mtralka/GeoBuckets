@@ -1,7 +1,7 @@
 
 export const equalIntervalBuckets = (data: Array<number>, numberClasses: number, classMin?: number, classMax?: number) : Array<number> => {
 
-    // if (!validateNumberClasses(validateNumberClasses)) return
+    validateNumberClasses(numberClasses, data.length)
 
     // if (!validateDataArray) return 
 

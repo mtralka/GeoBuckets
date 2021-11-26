@@ -1,7 +1,7 @@
 
 export const jenksBuckets = (data: Array<number>, numberClasses: number) : Array<number> => {
 
-    // if (!validateNumberClasses(validateNumberClasses)) return
+    validateNumberClasses(numberClasses, data.length)
 
     // if (!validateDataArray) return 
 
