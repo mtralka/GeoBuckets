@@ -1,7 +1,7 @@
 import { DataArrayError } from "../errors";
 import { validateDataArray, validateNumberClasses } from "../utils";
 
-export const geometricProgressionBuckets = (data: Array<number>, numberClasses: number) : Array<number> => {
+export const geometricProgressionBuckets = async (data: Array<number>, numberClasses: number) : Promise<Array<number>> => {
 
     validateDataArray(data.length)
     validateNumberClasses(numberClasses, data.length)
@@ -17,7 +17,6 @@ export const geometricProgressionBuckets = (data: Array<number>, numberClasses: 
     const interval: number = (logMax - logMin) / numberClasses;
 
     const initialBuckets: Array<number> = []
-
 
     for (let idx = 0; idx < numberClasses; idx++) {
 

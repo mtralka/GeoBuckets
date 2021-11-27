@@ -1,6 +1,6 @@
-import { validateNumberClasses, validateDataArray } from "../utils";
+import { validateDataArray, validateNumberClasses } from "../utils";
 
-export const equalIntervalBuckets = (data: Array<number>, numberClasses: number, classMin?: number, classMax?: number) : Array<number> => {
+export const equalIntervalBuckets = async (data: Array<number>, numberClasses: number, classMin?: number, classMax?: number) : Promise<Array<number>> => {
 
     validateDataArray(data.length)
     validateNumberClasses(numberClasses, data.length)

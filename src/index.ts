@@ -7,7 +7,7 @@ import { standardDeviationBuckets } from "./classifiers/standardDeviation";
 import { BucketTypes } from "./type";
 import { calcMean, calcStandardDeviation } from "./utils";
 
-const generateBuckets = (name: BucketTypes | string, data: Array<number>, numberClasses: number) : Array<number> => {
+const generateBuckets = async (name: BucketTypes | string, data: Array<number>, numberClasses: number) : Promise<Array<number>> => {
     
     if (!Object.keys(BucketTypes).includes(name as BucketTypes) && 
         !Object.values(BucketTypes).includes(name as BucketTypes)) {
@@ -18,22 +18,22 @@ const generateBuckets = (name: BucketTypes | string, data: Array<number>, number
 
     switch (name) {
         case BucketTypes.EQI:
-          buckets = equalIntervalBuckets(data, numberClasses);
+          buckets = await equalIntervalBuckets(data, numberClasses);
           break;
         case BucketTypes.QNT:
-          buckets = quantileBuckets(data, numberClasses);
+          buckets = await quantileBuckets(data, numberClasses);
           break;
         case BucketTypes.STD:
-          buckets = standardDeviationBuckets(data, numberClasses);
+          buckets = await standardDeviationBuckets(data, numberClasses);
           break;
         case BucketTypes.GPG:
-          buckets = geometricProgressionBuckets(data, numberClasses);
+          buckets = await geometricProgressionBuckets(data, numberClasses);
           break;
         case BucketTypes.APG:
-          buckets = arithmeticProgressionBuckets(data, numberClasses);
+          buckets = await arithmeticProgressionBuckets(data, numberClasses);
           break;
         case BucketTypes.JNK:
-          buckets = jenksBuckets(data, numberClasses);
+          buckets = await jenksBuckets(data, numberClasses);
           break;
         default:
           throw Error(`${name} not supported`)
@@ -48,7 +48,7 @@ export {
   jenksBuckets, quantileBuckets,
   standardDeviationBuckets, calcStandardDeviation,
   calcMean,
-  generateBucket,
+  generateBuckets,
   BucketTypes
 };
 

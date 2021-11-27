@@ -2,37 +2,34 @@ import { standardDeviationBuckets } from "../../src/classifiers/standardDeviatio
 import { DataArrayError, NumberClassError } from "../../src/errors";
 import { testDataA, testDataEmptyArray } from "../testData";
 
-test('expect correct classification dataset A DO match bound', () => {
-    const result: Array<number> = standardDeviationBuckets(testDataA.data, testDataA.numClasses, true)
+test('expect correct classification dataset A DO match bound', async () => {
+    const result: Array<number> = await standardDeviationBuckets(testDataA.data, testDataA.numClasses, true)
     const answer: Array<number> = testDataA.answers.STD_A
     expect(result).toEqual(answer)
 });
 
-test('expect correct classification dataset A NOT match bound', () => {
-    const result: Array<number> = standardDeviationBuckets(testDataA.data, testDataA.numClasses, false)
+test('expect correct classification dataset A NOT match bound', async () => {
+    const result: Array<number> = await standardDeviationBuckets(testDataA.data, testDataA.numClasses, false)
     const answer: Array<number> = testDataA.answers.STD_B
     expect(result).toEqual(answer)
 });
 
-test('throw number class error greater than data length', () => {
+test('throw number class error greater than data length', async () => {
     const incorrectNumberClasses: number = testDataA.data.length + 2
-    expect( () => {
+    await expect(
         standardDeviationBuckets(testDataA.data, incorrectNumberClasses)
-    }
-        ).toThrowError(NumberClassError)
+        ).rejects.toThrowError(NumberClassError)
 });
 
-test('throws number class error greater than zero', () => {
+test('throws number class error greater than zero', async () => {
     const incorrectNumberClasses: number = -2
-    expect( () => {
+    await expect(
         standardDeviationBuckets(testDataA.data, incorrectNumberClasses)
-    }
-        ).toThrowError(NumberClassError)
+        ).rejects.toThrowError(NumberClassError)
 });
 
-test('throws data array error array empty', () => {
-    expect( () => {
+test('throws data array error array empty', async () => {
+    await expect(
         standardDeviationBuckets(testDataEmptyArray.data, testDataEmptyArray.numClasses)
-    }
-        ).toThrowError(DataArrayError)
+        ).rejects.toThrowError(DataArrayError)
 });
