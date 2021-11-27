@@ -47,6 +47,7 @@ export {
   equalIntervalBuckets, geometricProgressionBuckets,
   jenksBuckets, quantileBuckets,
   standardDeviationBuckets, calcStandardDeviation,
-  calcMean
+  calcMean,
+  BucketTypes
 };
 

@@ -1,0 +1,6 @@
+dist/test
+.gitignore
+node_modules
+test/
+.gitattributes
+src/

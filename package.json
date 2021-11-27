@@ -1,14 +1,35 @@
 {
   "name": "geobuckets",
-  "version": "0.1.0",
-  "description": "Lightweight TypeScript library for data classification",
-  "main": "./src/index.js",
-  "type": "module",
-  "scripts": {
-    "test": "tsc && jest"
-  },
   "author": "Matthew Tralka",
   "license": "MIT",
+  "version": "0.0.1",
+  "description": "Lightweight Javascript (TypeScript, really) library for classification. Dependency free, tested, and type safe.",
+  "repository": "https://github.com/mtralka/GeoBuckets",
+  "bugs": "https://github.com/mtralka/GeoBuckets/issues",
+  "keywords": [
+    "mapping",
+    "classification",
+    "choropleth",
+    "map",
+    "stats",
+    "statistics",
+    "math"
+  ],
+  "main": "./dist/src/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/src/"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "tsc && jest",
+    "prepublish": "npm run test && tsc"
+  },
   "devDependencies": {
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.10",
