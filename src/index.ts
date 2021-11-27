@@ -48,7 +48,7 @@ export {
   jenksBuckets, quantileBuckets,
   standardDeviationBuckets, calcStandardDeviation,
   calcMean,
-  generateBucket,
+  generateBuckets,
   BucketTypes
 };
 
