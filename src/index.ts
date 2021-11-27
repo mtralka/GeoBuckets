@@ -7,7 +7,7 @@ import { standardDeviationBuckets } from "./classifiers/standardDeviation";
 import { BucketTypes } from "./type";
 import { calcMean, calcStandardDeviation } from "./utils";
 
-const generateBucket = (name: BucketTypes | string, data: Array<number>, numberClasses: number) : Array<number> => {
+const generateBuckets = (name: BucketTypes | string, data: Array<number>, numberClasses: number) : Array<number> => {
     
     if (!Object.keys(BucketTypes).includes(name as BucketTypes) && 
         !Object.values(BucketTypes).includes(name as BucketTypes)) {
