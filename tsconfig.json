@@ -3,11 +3,11 @@
     "declaration": true,
     "declarationMap": true,
     /* Language and Environment */
-    "target": "es2016",
+    "target": "es5",
     "outDir": "./dist",                 /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
 
     /* Modules */
-    "module": "commonjs",                                /* Specify what module code is generated. */
+    "module": "es6",                                /* Specify what module code is generated. */
     "rootDirs": ["src"],                                  /* Specify the root folder within your source files. */
     "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
     "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
