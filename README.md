@@ -1,6 +1,6 @@
 # 🌎🪣 GeoBuckets 
 
-Lightweight Javascript (TypeScript, really) library for classification. Dependency free and type safe.
+Lightweight Javascript (TypeScript, really) library for classification. Dependency free, tested, and type safe.
 
 ## Supports
 

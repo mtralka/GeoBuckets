@@ -2,9 +2,9 @@ import { validateNumberClasses, validateDataArray } from "../utils";
 
 export const jenksBuckets = (data: Array<number>, numberClasses: number) : Array<number> => {
 
-    validateNumberClasses(numberClasses, data.length)
     validateDataArray(data.length)
-
+    validateNumberClasses(numberClasses, data.length)
+    
     data.sort((a,b) => a - b)
 
     const mat1: Array<Array<number>> = Array.from(Array(data.length + 1)).map(el => el = Array(numberClasses + 1))

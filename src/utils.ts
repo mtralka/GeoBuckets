@@ -1,14 +1,16 @@
+import { DataArrayError, NumberClassError } from "./errors"
+
 export const validateNumberClasses = (numberClasses: Number, arrayLength: number) : void => {
 
-    if (!Number.isInteger(numberClasses)) throw "Number classes must be an integer"
-    if (numberClasses > arrayLength) throw "Number classes must be less than array length"
-    if (numberClasses === 0) throw "Number classes must be greater than zero"
+    if (!Number.isInteger(numberClasses)) throw TypeError("Number classes must be an integer")
+    if (numberClasses > arrayLength) throw new NumberClassError("Number classes must be less than array length")
+    if (numberClasses <= 0) throw new NumberClassError("Number classes must be greater than zero")
     
 }
 
 export const validateDataArray = (arrayLength: number) : void => {
 
-    if (arrayLength <= 0) throw "Array length must be bigger than one"
+    if (arrayLength <= 0) throw new DataArrayError("Array length must be bigger than one")
 }
 
 export const calcStandardDeviation = (data: Array<number>) : number => {
@@ -21,3 +23,4 @@ export const calcMean = (data: Array<number>) : number => {
     const n: number = data.length
     return data.reduce((a, b) => a + b) / n
 }
+

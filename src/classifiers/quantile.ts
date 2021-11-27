@@ -2,9 +2,9 @@ import { validateNumberClasses, validateDataArray } from "../utils";
 
 export const quantileBuckets = (data: Array<number>, numberClasses: number) : Array<number> => {
 
-    validateNumberClasses(numberClasses, data.length)
     validateDataArray(data.length)
-
+    validateNumberClasses(numberClasses, data.length)
+    
     data.sort((a, b) => a - b)
 
     const quartiles: Array<number> = []

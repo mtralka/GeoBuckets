@@ -1,16 +1,23 @@
 {
   "name": "geobuckets",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Lightweight TypeScript library for data classification",
   "main": "./src/index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tsc && jest"
   },
   "author": "Matthew Tralka",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
-    "typescript": "^4.5.2"
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.10",
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.5.2",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-typescript": "^7.16.0",
+    "babel-jest": "^27.3.1"
   }
 }
