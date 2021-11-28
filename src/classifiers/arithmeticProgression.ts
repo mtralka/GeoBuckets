@@ -1,12 +1,11 @@
 import { validateDataArray, validateNumberClasses } from "../utils";
 
 
-export const arithmeticProgressionBuckets = (data: Array<number>, numberClasses: number) : Array<number> => {
+export const arithmeticProgressionBuckets = async (data: Array<number>, numberClasses: number) : Promise<Array<number>> => {
 
     validateDataArray(data.length)
     validateNumberClasses(numberClasses, data.length)
     
-
     let denominator: number = 0
     for (let idx = 1; idx <= numberClasses; idx++) {
         denominator += idx;

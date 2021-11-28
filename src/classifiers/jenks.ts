@@ -1,6 +1,6 @@
-import { validateNumberClasses, validateDataArray } from "../utils";
+import { validateDataArray, validateNumberClasses } from "../utils";
 
-export const jenksBuckets = (data: Array<number>, numberClasses: number) : Array<number> => {
+export const jenksBuckets = async (data: Array<number>, numberClasses: number) : Promise<Array<number>> => {
 
     validateDataArray(data.length)
     validateNumberClasses(numberClasses, data.length)

@@ -11,6 +11,7 @@ Lightweight Javascript (TypeScript, really) library for classification. Dependen
   - 🌲 tree-shakeable
 - :test_tube: fully tested
 - :label: fully typed
+- :rock: asynchronous and non-blocking
 
 ## Supports
 
@@ -27,7 +28,19 @@ Lightweight Javascript (TypeScript, really) library for classification. Dependen
 - Jenks (JNK)
   - `jenksBuckets`
 
+## Install
+
+Install through NPM
+
+```
+
+npm install geobuckets
+
+```
+
 ## Usage
+
+All outward facing functions are async and must be called with `await XXX`
 
 Explicit import:
 
@@ -37,7 +50,7 @@ import { jenksBuckets } from "geobuckets";
 const data: Array<number> = [60, 26, 20, 17, 10, 27, 98, 42, 55, 35];
 const numClasses: number = 3;
 
-const buckets: Array<number> = jenksBuckets(data, numClasses);
+const buckets: Array<number> = await jenksBuckets(data, numClasses);
 
 console.log(buckets) >> [10, 35, 60, 98];
 ```
@@ -50,7 +63,7 @@ import { generateBuckets, BucketTypes } from "geobuckets";
 const data: Array<number> = [60, 26, 20, 17, 10, 27, 98, 42, 55, 35];
 const numClasses: number = 3;
 
-const buckets: Array<number> = generateBuckets(
+const buckets: Array<number> = await generateBuckets(
   BucketTypes.JNK,
   data,
   numClasses

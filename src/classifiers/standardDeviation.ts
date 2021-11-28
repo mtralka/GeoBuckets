@@ -1,6 +1,6 @@
 import { calcMean, calcStandardDeviation, validateDataArray, validateNumberClasses } from "../utils"
 
-export const standardDeviationBuckets = (data: Array<number>, numberClasses: number, matchDataBounds : boolean = true) : Array<number> => {
+export const standardDeviationBuckets = async (data: Array<number>, numberClasses: number, matchDataBounds : boolean = true) : Promise<Array<number>> => {
 
     validateDataArray(data.length)
     validateNumberClasses(numberClasses, data.length)
@@ -8,8 +8,8 @@ export const standardDeviationBuckets = (data: Array<number>, numberClasses: num
     const bucketMin: number = Math.min(...data)
     const bucketMax: number = Math.max(...data)
 
-    const standardDeviation: number = calcStandardDeviation(data)
-    const mean: number = calcMean(data)
+    const standardDeviation: number = await calcStandardDeviation(data)
+    const mean: number = await calcMean(data)
     
     const buckets: Array<number> = []
 

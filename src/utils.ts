@@ -13,13 +13,13 @@ export const validateDataArray = (arrayLength: number) : void => {
     if (arrayLength <= 0) throw new DataArrayError("Array length must be bigger than one")
 }
 
-export const calcStandardDeviation = (data: Array<number>) : number => {
+export const calcStandardDeviation = async (data: Array<number>) : Promise<number> => {
     const n: number = data.length
-    const mean = calcMean(data)
+    const mean = await calcMean(data)
     return Math.sqrt(data.map(x => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / n)
   }
 
-export const calcMean = (data: Array<number>) : number => {
+export const calcMean = async (data: Array<number>) : Promise<number> => {
     const n: number = data.length
     return data.reduce((a, b) => a + b) / n
 }

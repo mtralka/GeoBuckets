@@ -4,14 +4,14 @@ import { testDataA, testDataEmptyArray } from "./testData";
 
 
 
-test('expect correct STD dataset A', () => {
-    const result: number = calcStandardDeviation(testDataA.data)
+test('expect correct STD dataset A', async () => {
+    const result: number = await calcStandardDeviation(testDataA.data)
     const answer: number = 24.903814968795444
     expect(result).toEqual(answer)
 });
 
-test('expect correct Mean dataset A', () => {
-    const result: number = calcMean(testDataA.data)
+test('expect correct Mean dataset A', async () => {
+    const result: number = await calcMean(testDataA.data)
     const answer: number = 39
     expect(result).toEqual(answer)
 });

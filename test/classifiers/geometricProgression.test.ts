@@ -2,39 +2,35 @@ import { geometricProgressionBuckets } from "../../src/classifiers/geometricProg
 import { DataArrayError, NumberClassError } from "../../src/errors";
 import { testDataA, testDataEmptyArray } from "../testData";
 
-test('expect correct classification dataset A', () => {
-    const result: Array<number> = geometricProgressionBuckets(testDataA.data, testDataA.numClasses)
+test('expect correct classification dataset A', async () => {
+    const result: Array<number> = await geometricProgressionBuckets(testDataA.data, testDataA.numClasses)
     const answer: Array<number> = testDataA.answers.GPG
     expect(result).toEqual(answer)
 });
 
-test('throw error array negative values in array', () => {
+test('throw error array negative values in array', async () => {
     const data: Array<number> = [42, 55, 35, -1]
-    expect( () => {
+    await expect(
         geometricProgressionBuckets(data, 2)
-    }
-        ).toThrowError(DataArrayError)
+        ).rejects.toThrowError(DataArrayError)
 });
 
-test('throw number class error greater than data length', () => {
+test('throw number class error greater than data length', async () => {
     const incorrectNumberClasses: number = testDataA.data.length + 2
-    expect( () => {
+    await expect(
         geometricProgressionBuckets(testDataA.data, incorrectNumberClasses)
-    }
-        ).toThrowError(NumberClassError)
+        ).rejects.toThrowError(NumberClassError)
 });
 
-test('throws number class error greater than zero', () => {
+test('throws number class error greater than zero', async () => {
     const incorrectNumberClasses: number = -2
-    expect( () => {
+    await expect(
         geometricProgressionBuckets(testDataA.data, incorrectNumberClasses)
-    }
-        ).toThrowError(NumberClassError)
+        ).rejects.toThrowError(NumberClassError)
 });
 
-test('throws data array error array empty', () => {
-    expect( () => {
+test('throws data array error array empty', async () => {
+    await expect(
         geometricProgressionBuckets(testDataEmptyArray.data, testDataEmptyArray.numClasses)
-    }
-        ).toThrowError(DataArrayError)
+        ).rejects.toThrowError(DataArrayError)
 });
