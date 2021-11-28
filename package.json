@@ -2,7 +2,7 @@
   "name": "geobuckets",
   "author": "Matthew Tralka",
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Lightweight Javascript (TypeScript, really) library for classification. Dependency free, tested, and type safe.",
   "repository": "https://github.com/mtralka/GeoBuckets",
   "bugs": "https://github.com/mtralka/GeoBuckets/issues",
