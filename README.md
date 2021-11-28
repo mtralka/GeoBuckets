@@ -44,7 +44,7 @@ All outward facing functions are async and must be called with `await XXX`
 
 Explicit import:
 
-```javascript
+```typescript
 import { jenksBuckets } from "geobuckets";
 
 const data: Array<number> = [60, 26, 20, 17, 10, 27, 98, 42, 55, 35];
@@ -57,7 +57,7 @@ console.log(buckets) >> [10, 35, 60, 98];
 
 Helper function and type
 
-```javascript
+```typescript
 import { generateBuckets, BucketTypes } from "geobuckets";
 
 const data: Array<number> = [60, 26, 20, 17, 10, 27, 98, 42, 55, 35];
